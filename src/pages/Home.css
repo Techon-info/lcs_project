@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  min-height: 100vh;
+  margin-top: 50px; /* ✅ Add this to push content below Navbar */
+}
+
+/* Optionally adjust for mobile */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 90px; /* ✅ Slightly more space for mobile navbar */
+  }
+}
+
+.tagline {
+ font-family: 'Lato', sans-serif; /* Elegant and bold font */
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7f0606;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.4;
+  letter-spacing: 0px;
+  position: relative;
+}
+
+/* Make carousel control icons black */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  background-size: 100% 100%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+
+.tagline::before,
+.tagline::after {
+  content: '✦';
+  color: #f4a261;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+
+
+.home-left {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.home-title {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+   background-color:rgb(220, 200, 72);
+  color:black;
+}
+
+.home-right {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.home-right img {
+  height: 400px;              /* Use fixed height instead of max-height */
+  width: 100%;
+  object-fit: cover;          /* Ensures image fills space without distortion */
+  border-radius: 10px;
+  display: block;
+}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+ 
+
+  .home-left,
+  .home-right {
+    max-width: 100%;
+  }
+
+  .home-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .home-description {
+    text-align: center;
+  }
+
+  .home-button {
+    display: block;
+    margin: 0 auto;
+  }
+ 
+  .tagline {
+    font-size: 1.5rem;
+    margin: 15px 10px;
+  }
+
+}
